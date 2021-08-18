@@ -1,7 +1,7 @@
 # QRCodeDLReader Quick Start
 
 ## Environment
-- OS: Can use Docker
+- OS: Linux (Can use Docker)
 - GPU: Nvidia (No device is OK)
 
 ## Install Docker
@@ -51,3 +51,17 @@ python Main.py -m 2 -l [WORDLENGTH]
 ```
 
 ## Generating QRcode on Number Only
+If you want to generate only number, replace 
+```
+TARGET_WORDS=string.digits+string.ascii_letters
+```
+as
+```
+TARGET_WORDS=string.digits#+string.ascii_letters
+```
+in "Config.py".
+
+If you want to replace it by command line, use
+```
+sed -i s/TARGET_WORDS=string.digits+string.ascii_letters/TARGET_WORDS=string.digits#+string.ascii_letters/ Config.py
+```
