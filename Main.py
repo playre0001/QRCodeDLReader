@@ -238,8 +238,8 @@ def ParseArguments(args):
     parser.add_argument("-s","--save_dir_image_path",default="QRImages",type=str,help="The dir path to save for QRCode Image")
     parser.add_argument("-w","--words",default=None,type=str,help="The words for generating QRCode")
     parser.add_argument("-l","--words_length",default=7,type=int,help="This argument is to define input words length for prediction.If already define words(w) option, this argument will be ignored.")
-    parser.add_argument("--turn_off_memory_allocate",action="store_true",help="Turn off auto gpu memory allocate function")
-    parser.add_argument("-g","--using_gpu_number",default=-1,type=int,help="Useing GPU Number. -1 is use all gpu")
+    parser.add_argument("--turn_off_memory_allocate",action="store_false",help="Turn off auto gpu memory allocate function")
+    parser.add_argument("-g","--using_gpu_number",default=-1,type=int,help="Using GPU Number. -1 is use all gpu")
 
     
     #引数の解析
